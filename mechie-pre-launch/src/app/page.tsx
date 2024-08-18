@@ -4,6 +4,7 @@ import { LaunchSoon } from "./components/launch-soon";
 import logoLarge from "./Image/vector-logo.png"
 import logoSmall from "./Image/logo-small.png"
 import Email from "./components/Email";
+import TestimonialCarousel from "./components/Carousel";
 export default function Home() {
   return (
     <div className="">
@@ -13,11 +14,11 @@ export default function Home() {
         
         <div className="w-full ">  
           <LaunchSoon />
-          <div className="my-5 h-auto text-[#13072e] text-[40px] sm:text-[60px] sm:leading-[64px] md:text-[80px] md:leading-[84px] font-medium font-['Inter'] leading-[42px]">
+          <div className="my-5 h-auto text-[#13072e] text-[50px] sm:text-[60px] sm:leading-[64px] md:text-[75px] md:leading-[77px] font-medium font-['Inter'] leading-[54px]">
             Accelerate Your Mechanical Engineering  
             <span className="font-medium font-['Inter'] gradient-text"> Career to the Next Level</span>
           </div>
-          <div className="mb-5 md:w-[460px] mr-12 sm:text-[20px] text-[15px] font-normal font-['Inter'] leading-relaxed"> 
+          <div className=" md:w-[460px] mr-12 sm:text-[20px] text-[15px] font-normal font-['Inter'] leading-relaxed my-5"> 
           Join our waitlist to access the platform on a priority basis as soon as we launch!
           </div>
           {/* <Email></Email> */}
@@ -28,7 +29,7 @@ export default function Home() {
         
 
 
-          <div className="flex sm:mt-[20px] w-full md:max-w-[33%] sm:max-w-[15%] max-w-[33%]">
+          <div className="flex sm:mt-[20px] w-full md:max-w-[28%] sm:max-w-[15%] max-w-[33%]">
 
             <div className=" hidden md:block">
                 <Image
@@ -53,10 +54,12 @@ export default function Home() {
 
 
         </div> 
-        <div className="flex justify-center mt-5 sm:flex sm:justify-start">
+        <div className="flex justify-center sm:flex sm:justify-start mb-12 ">
           <Email ></Email>
         </div>
+        {/* <TestimonialCarousel></TestimonialCarousel> */}
     </div> 
+    <TestimonialCarousel></TestimonialCarousel>
       
     </div>
   );
