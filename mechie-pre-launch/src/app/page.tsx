@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LaunchSoon } from "./components/launch-soon";
-import logo from "./Image/vector-logo.png"
-
+import logoLarge from "./Image/vector-logo.png"
+import logoSmall from "./Image/logo-small.png"
 export default function Home() {
   return (
     <div >
@@ -20,16 +20,22 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-[40px] w-full max-w-[90%]">
+          <div className="mt-[20px] w-full max-w-[90%]">
+
+
+            <div className="block md:hidden">
             <Image
-                src={logo}// Replace with your image path
+                src={logoSmall}// Replace with your image path
                 alt="logo"
                 width={800} // Replace with your image width
                 height={800} // Replace with your image height
                 className=""
               />
+            </div>
           </div>
-        </div>
+
+
+        </div> 
         <p className="mr-12 text-lg font-normal font-['Inter'] leading-relaxed">Join our waitlist to access the platform on a priority basis as soon as we launch!</p>
     </div> 
       
