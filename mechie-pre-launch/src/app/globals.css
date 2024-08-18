@@ -25,6 +25,10 @@ mechie-purple{
 }
 
 body {
+  background-image: url('./Image/design-vector.png'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -32,6 +36,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+    
 }
 
 @layer utilities {
