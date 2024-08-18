@@ -1,42 +1,51 @@
+
 import Image from "next/image";
 import { LaunchSoon } from "./components/launch-soon";
 import logoLarge from "./Image/vector-logo.png"
 import logoSmall from "./Image/logo-small.png"
 export default function Home() {
   return (
-    <div >
+    <div className="">
       
-      <div className="ml-8 my-2 ">
+      <div className="md:ml-20 ml-2 my-2 ">
         <div className="flex "> 
-          <div className="">  
-            <LaunchSoon ></LaunchSoon>
-            {/* <h1 className=" ml-12 w-[990px] text-[80px] font-medium font-['Inter'] leading-[89.6px]">Accelerate Your Mechanical Engineering 
-              <span className="text-[80px] font-medium font-['Inter'] leading-[89.6px] gradient-text"> Career to the Next Level</span>
-            </h1> */}
-            <div className="my-5  h-[161px] text-[#13072e] text-[32px] font-medium font-['Inter'] leading-[34px]">Accelerate Your Mechanical Engineering  
+        
+        <div className="w-full ">  
+          <LaunchSoon />
+          <div className="my-5 h-auto text-[#13072e] text-[40px] sm:text-[60px] sm:leading-[64px] md:text-[80px] md:leading-[84px] font-medium font-['Inter'] leading-[42px]">
+            Accelerate Your Mechanical Engineering  
             <span className="font-medium font-['Inter'] gradient-text"> Career to the Next Level</span>
-            </div>
- 
           </div>
+          <div className="md:w-[460px] mr-12 sm:text-[20px] text-[15px] font-normal font-['Inter'] leading-relaxed"> 
+          Join our waitlist to access the platform on a priority basis as soon as we launch!
+          </div>
+        </div>
 
 
-          <div className="mt-[20px] w-full max-w-[90%]">
+          <div className="flex sm:mt-[20px] w-full md:max-w-[33%] sm:max-w-[23%] max-w-[40%]">
 
-
-            <div className="block md:hidden">
-            <Image
-                src={logoSmall}// Replace with your image path
-                alt="logo"
-                width={800} // Replace with your image width
-                height={800} // Replace with your image height
-                className=""
-              />
-            </div>
+            <div className=" hidden md:block">
+                <Image
+                    src={logoLarge}// Image for medium and larger screen
+                    alt="logo"
+                    width={500} 
+                    height={500} 
+                    className="justify-end"
+                  />
+              </div>
+              <div className="block md:hidden">
+                <Image
+                    src={logoSmall}// Replace with your image path
+                    alt="logo"
+                    objectFit="contain"
+                    className="justify-end"
+                  />
+              </div>
           </div>
 
 
         </div> 
-        <p className="mr-12 text-lg font-normal font-['Inter'] leading-relaxed">Join our waitlist to access the platform on a priority basis as soon as we launch!</p>
+        
     </div> 
       
     </div>
