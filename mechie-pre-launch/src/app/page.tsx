@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <div className="">
       
-      <div className="md:ml-10 ml-2 sm:ml-4 my-2 ">
+      <div className="md:ml-24 ml-2 sm:ml-4 my-2 ">
         <div className="flex "> 
         
         <div className="w-full ">  
           <LaunchSoon />
-          <div className="my-5 h-auto text-[#13072e] text-[50px] sm:text-[60px] sm:leading-[64px] md:text-[75px] md:leading-[77px] font-medium font-['Inter'] leading-[54px]">
+          <div className="my-5 h-auto text-[#13072e] text-[50px] sm:text-[60px] sm:leading-[64px] md:text-[85px] md:leading-[87px] font-medium font-['Inter'] leading-[54px]">
             Accelerate Your Mechanical Engineering  
             <span className="font-medium font-['Inter'] gradient-text"> Career to the Next Level</span>
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
 
 
         </div> 
-        <div className="flex justify-center sm:flex sm:justify-start mb-12 ">
+        <div className="flex justify-center sm:flex  mb-12 ">
           <Email ></Email>
         </div>
         {/* <TestimonialCarousel></TestimonialCarousel> */}
