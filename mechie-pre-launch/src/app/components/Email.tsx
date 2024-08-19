@@ -15,11 +15,11 @@ export default function EmailNotification() {
         <input
                 type="email"
                 placeholder="Enter your email..."
-                className="md:w-10 sm:w-8 w-6 flex-grow bg-transparent text-[#13072e]/60 text-base font-medium font-['Inter'] leading-normal focus:outline-none"
+                className="md:w-10 sm:w-8 w-6 flex-grow bg-transparent text-[#13072e]/60 sm:text-base sm:font-medium text-sm font-['Inter'] leading-normal focus:outline-none"
               />
       </div>
       {/* Button */}
-      <div className="md:px-6 md:py-4 px-3 py-3  bg-[#6f41d2] rounded-tr-xl rounded-br-xl shadow-inner border border-[#a576ff] flex items-center">
+      <div className="md:px-6 md:py-4 sm:px-3 sm:py-3 px-1 py-3 bg-[#6f41d2] rounded-tr-xl rounded-br-xl shadow-inner border border-[#a576ff] flex items-center">
         <button className="text-white text-base font-medium font-['Inter']">
           Notify me
         </button>

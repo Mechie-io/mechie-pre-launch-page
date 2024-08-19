@@ -5,11 +5,12 @@ import logoLarge from "./Image/vector-logo.png"
 import logoSmall from "./Image/logo-small.png"
 import Email from "./components/Email";
 import TestimonialCarousel from "./components/Carousel";
+
 export default function Home() {
   return (
     <div className="">
       
-      <div className="md:ml-20 ml-2 sm:ml-4 my-2 ">
+      <div className="md:ml-10 ml-2 sm:ml-4 my-2 ">
         <div className="flex "> 
         
         <div className="w-full ">  
@@ -29,7 +30,7 @@ export default function Home() {
         
 
 
-          <div className="flex sm:mt-[20px] w-full md:max-w-[28%] sm:max-w-[15%] max-w-[33%]">
+          <div className="flex sm:mt-[20px] w-full md:max-w-[28%] sm:max-w-[15%] max-w-[30%]">
 
             <div className=" hidden md:block">
                 <Image
@@ -59,7 +60,9 @@ export default function Home() {
         </div>
         {/* <TestimonialCarousel></TestimonialCarousel> */}
     </div> 
-    <TestimonialCarousel></TestimonialCarousel>
+        <div className="container mx-auto px-4">
+            <TestimonialCarousel />
+        </div>
       
     </div>
   );
