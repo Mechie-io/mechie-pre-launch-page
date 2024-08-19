@@ -8,29 +8,45 @@ import Image from "next/image"
 
 const Footer:FunctionComponent = () =>{
     return(
-        <div className="w-full relative border-uishadcncom-athens-gray border-t-[1px] border-solid box-border overflow-hidden flex flex-col items-center justify-center pt-24 px-12 pb-6 gap-16 text-left text-sm text-uishadcncom-woodsmoke-60 font-roboto">
+        <footer className="border py-10">
+            <div className="flex items-center justify-center mb-5">
 
-            <div className="w-[120.5px] h-6 mb-0 pb-0 flex items-center">
-            <div className="relative h-full w-full flex items-center justify-between">
-                <Image
-                className="h-full w-auto"
-                alt="company logo"
-                src={logo}
-                />
-                <Image
-                className="h-[80%] w-auto"
-                alt="company name"
-                src={companyName}
-                />
+                <div className="w-[120.5px] h-6  flex items-center">
+                    <div className="relative h-full w-full flex items-center justify-between">
+                        <Image
+                        className="h-full w-auto"
+                        alt="company logo"
+                        src={logo}
+                        />
+                        <Image
+                        className="h-[80%] w-auto"
+                        alt="company name"
+                        src={companyName}
+                        />
+                    </div>
+                </div>
+                
+
+
+                
             </div>
+            <div className="flex justify-center items-center mb-4 pt-0 w-full text-center text-[#13072e] text-base font-normal font-['Inter']">
+                <div className="w-[309px]">
+                    Sign up to get access to the platform on a priority basis as soon as we launch!
+                </div>
             </div>
+            <div className="flex justify-center items-center h-5 gap-6 my-10">
+                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Youtube</div>
+                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Instagram</div>
+                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Twitter</div>
 
+                </div>
 
-            <div className="mb-100 pt-0 w-[309px] text-center text-[#13072e] text-base font-normal font-['Inter'] ">Sign up to get access to the platform on a priority basis as soon as we launch!</div>
+            <div className="flex justify-center items-center my-10">
+                <div className=" text-[#13072e]/60 text-sm font-normal font-['Inter'] leading-tight">© 2024 | Mechie. All rights reserved.</div>
 
-            
             </div>
-
+        </footer>
     );
 };
 

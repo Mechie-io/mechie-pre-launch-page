@@ -4,25 +4,26 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { useSwiper } from 'swiper/react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const CustomNavigation = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="flex justify-between mt-4">
+    <>
       <button
         onClick={() => swiper.slidePrev()}
-        className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800"
+        className="absolute top-[40%] left-0 transform -translate-y-1/2 bg-purple-300 text-white p-3 rounded-full hover:bg-purple-800 z-10"
       >
-        Prev
+        <FaArrowLeft />
       </button>
       <button
         onClick={() => swiper.slideNext()}
-        className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800"
+        className="absolute top-[40%] right-0 transform -translate-y-1/2 bg-purple-300 text-white p-3 rounded-full hover:bg-purple-800 z-10"
       >
-        Next
+        <FaArrowRight />
       </button>
-    </div>
+    </>
   );
 };
 
@@ -51,32 +52,36 @@ const TestimonialCarousel = () => {
   ];
 
   return (
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={3}
-      loop={true}
-      pagination={{ clickable: true }}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
-      breakpoints={{
-        1024: { slidesPerView: 3 },
-        600: { slidesPerView: 2 },
-        320: { slidesPerView: 1 },
-      }}
-    >
-      {testimonials.map((testimonial, index) => (
-        <SwiperSlide key={index}>
-          <div className="bg-white p-6 rounded-lg shadow-md text-gray-700 md:h-60 mb-20 h-80">
-            <p className="mb-6">{testimonial.text}</p>
-            <p className="text-right text-purple-600 font-semibold">{testimonial.name}</p>
-            <p className="text-right text-sm text-gray-500">{testimonial.position}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-      <CustomNavigation />
-    </Swiper>
+    <div className="relative">
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={3}
+        loop={true}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          1024: { slidesPerView: 3 },
+          600: { slidesPerView: 2 },
+          320: { slidesPerView: 1 },
+        }}
+      >
+        {testimonials.map((testimonial, index) => (
+          
+          <SwiperSlide key={index}>
+            <div className="bg-white  p-6 rounded-lg shadow-md text-gray-700 md:h-60 mb-20 h-80">
+              <p className="mb-6 px-5">{testimonial.text}</p>
+              <p className="text-right text-purple-600 font-semibold px-4">{testimonial.name}</p>
+              <p className="text-right text-sm text-gray-500">{testimonial.position}</p>
+            </div>
+          </SwiperSlide>
+          
+        ))}
+        <CustomNavigation />
+      </Swiper>
+    </div>
   );
 };
 

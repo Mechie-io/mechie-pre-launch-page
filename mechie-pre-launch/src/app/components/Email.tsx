@@ -19,7 +19,7 @@ export default function EmailNotification() {
               />
       </div>
       {/* Button */}
-      <div className="md:px-6 md:py-4 sm:px-3 sm:py-3 px-1 py-3 bg-[#6f41d2] rounded-tr-xl rounded-br-xl shadow-inner border border-[#a576ff] flex items-center">
+      <div className="hover:bg-[#a576ff]  md:px-6 md:py-4 sm:px-3 sm:py-3 px-1 py-3 bg-[#6f41d2] rounded-tr-xl rounded-br-xl shadow-inner border border-[#a576ff] flex items-center">
         <button className="text-white text-base font-medium font-['Inter']">
           Notify me
         </button>

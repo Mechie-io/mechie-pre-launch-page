@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="">
       
-      <div className="md:ml-24 ml-2 sm:ml-4 my-2 ">
+      <div className="md:ml-20 ml-2 sm:ml-4 my-2 ">
         <div className="flex "> 
         
         <div className="w-full ">  
