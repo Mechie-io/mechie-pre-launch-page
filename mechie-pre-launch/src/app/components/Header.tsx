@@ -22,12 +22,12 @@ const Header:FunctionComponent = () => {
 
                 <div className="flex flex-row items-center justify-start gap-5">
                     
-                    <div className="h-11 px-5 py-2 bg-[#6f41d2] hover:bg-[#a576ff]  rounded-xl shadow-inner border border-[#a576ff] flex items-center justify-center">
+                    {/* <div className="h-11 px-5 py-2 bg-[#6f41d2] hover:bg-[#a576ff]  rounded-xl shadow-inner border border-[#a576ff] flex items-center justify-center">
                         <div className="relative leading-[20px] font-medium text-white text-sm font-['Inter'] text-center">
                             Join Waitlist
                         </div>
                         
-                        </div>
+                        </div> */}
 
                 </div>
 

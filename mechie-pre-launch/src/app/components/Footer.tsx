@@ -36,9 +36,21 @@ const Footer:FunctionComponent = () =>{
                 </div>
             </div>
             <div className="flex justify-center items-center h-5 gap-6 my-10">
-                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Youtube</div>
-                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Instagram</div>
-                <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">Twitter</div>
+            <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">
+                <a href="https://www.youtube.com/@TamerShaheen" target="_blank" rel="noopener noreferrer" className="hover:text-[#13072e]">
+                    YouTube
+                </a>
+            </div>
+            <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">
+                <a href="https://www.instagram.com/tamerxi/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-[#13072e]">
+                    Instagram
+                </a>
+            </div>
+            <div className="text-center text-[#13072e]/60 text-base font-normal font-['Inter'] leading-tight">
+                <a href="https://x.com/tamerxi?lang=en" target="_blank" rel="noopener noreferrer" className="hover:text-[#13072e]">
+                    Twitter
+                </a>
+            </div>
 
                 </div>
 
