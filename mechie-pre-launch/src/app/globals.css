@@ -9,10 +9,19 @@
   display: none;
 }
 
-.gradient-text {
+/* .gradient-text {
   background: linear-gradient(90deg, #13072E 0%, #A576FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+
+
+.gradient-text {
+  background: linear-gradient(to bottom, #392861 0%, #A576FF 100%); /* Customize your gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;
