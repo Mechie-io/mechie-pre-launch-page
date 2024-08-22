@@ -22,9 +22,14 @@ export default function Home() {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();  // Prevent default form submission behavior
   
-    console.log("Email value before Firestore:", email);  // Log the email value
-  
-    
+    // console.log("Email value before Firestore:", email);  // Log the email value
+
+    // Basic email validation using regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
   
     try {
       // Add the email to Firestore
@@ -32,15 +37,15 @@ export default function Home() {
         email: email,
       });
   
-      console.log("Document written with ID: ", docRef.id);
+      // console.log("Document written with ID: ", docRef.id);
   
       // Clear the email input after successful submission
       setEmail("");
-      alert("Data added to Firestore DB!!");
+      alert("Thanks for joining the waitlist. ");
   
     } catch (error) {
       console.error("Error adding document: ", error);
-      alert("Failed to add data to Firestore.");
+      alert("Failed.");
     }
   };
   
