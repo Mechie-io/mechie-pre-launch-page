@@ -10,7 +10,7 @@ const db = getFirestore(app);
 
 async function exportEmailsToCSV() {
   try {
-    const emails: { email: string }[] = [];
+    const emails = [];
     const messagesRef = collection(db, "messages");
     const snapshot = await getDocs(messagesRef);
 
@@ -22,7 +22,7 @@ async function exportEmailsToCSV() {
     });
 
     const csvWriter = createObjectCsvWriter({
-      path: path.resolve(__dirname, "emails.csv"),
+      path: path.resolve(__dirname, "emails3.csv"),
       header: [{ id: "email", title: "Email" }],
     });
 

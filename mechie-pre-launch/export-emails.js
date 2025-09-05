@@ -22,38 +22,20 @@ const db = getFirestore(app);
 async function exportEmailsToCSV() {
   try {
     console.log("Starting email export...");
-    console.log("Firebase config:", {
-      projectId: firebaseConfig.projectId,
-      authDomain: firebaseConfig.authDomain,
-    });
 
     const emails = [];
     const messagesRef = collection(db, "messages");
-    console.log("Querying collection: messages");
-
     const snapshot = await getDocs(messagesRef);
     console.log(`Found ${snapshot.size} documents in messages collection`);
 
     snapshot.forEach((doc) => {
       const data = doc.data();
-      console.log("Document data:", data);
       if (data.email) {
         emails.push({ email: data.email });
-        console.log("Added email:", data.email);
-      } else {
-        console.log("No email field found in document:", doc.id);
       }
     });
 
     console.log(`Total emails collected: ${emails.length}`);
-
-    if (emails.length === 0) {
-      console.log("No emails found. Please check:");
-      console.log("1. The collection name is correct (should be 'messages')");
-      console.log("2. The field name is correct (should be 'email')");
-      console.log("3. There are actually documents in the collection");
-      return;
-    }
 
     const csvWriter = createObjectCsvWriter({
       path: path.resolve(__dirname, "src", "emails.csv"),
